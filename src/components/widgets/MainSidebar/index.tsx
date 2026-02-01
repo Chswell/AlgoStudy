@@ -64,7 +64,7 @@ const data = {
 					url: PUBLIC_ROUTES.sorting('/quick')
 				},
 				{
-					title: 'Пирамидальная',
+					title: 'Кучей (Пирамидальная)',
 					url: PUBLIC_ROUTES.sorting('/heap')
 				}
 			]

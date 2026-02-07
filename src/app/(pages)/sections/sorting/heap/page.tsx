@@ -1,12 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
-import { FaInfoCircle } from 'react-icons/fa'
-import { FaCircleInfo, FaInfo } from 'react-icons/fa6'
 
 import PublicLayout from '@/app/layouts/PublicLayout'
 
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 

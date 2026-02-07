@@ -1,6 +1,6 @@
 import React from 'react'
 
-import PublicLayout from '@/app/layouts/PublicLayout'
+import { ThemeProvider } from '@/app/providers/ThemeProvider'
 
 import { SidebarProvider } from '@/components/ui/sidebar'
 
@@ -11,7 +11,9 @@ interface IRootProviderProps {
 const RootProvider: React.FC<IRootProviderProps> = ({ children }) => {
 	return (
 		<>
-			<SidebarProvider>{children}</SidebarProvider>
+			<ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
+				<SidebarProvider>{children}</SidebarProvider>
+			</ThemeProvider>
 		</>
 	)
 }

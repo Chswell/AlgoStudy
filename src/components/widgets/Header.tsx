@@ -22,43 +22,53 @@ import {
 import { SidebarTrigger } from '@/components/ui/sidebar'
 import { DarkModeToggle } from '@/components/widgets/DarkModeToggle'
 
+const BREADCRUMB_LABELS: Record<string, string> = {
+	sections: 'Разделы',
+	// Общая информация
+	general: 'Общая информация',
+	complexity: 'Классы сложности',
+	'complexity-analysis': 'Оценка сложности',
+	// Сортировки
+	sorting: 'Сортировки',
+	bubble: 'Пузырьковая сортировка',
+	selection: 'Сортировка выбором',
+	insertion: 'Сортировка вставками',
+	merge: 'Сортировка слиянием',
+	quick: 'Быстрая сортировка',
+	heap: 'Сортировка кучей',
+	// Поиск
+	search: 'Поиск',
+	linear: 'Линейный поиск',
+	binary: 'Бинарный поиск',
+	'bfs-dfs': 'BFS и DFS',
+	dijkstra: 'Алгоритм Дейкстры',
+	// Очередь и стек
+	'queue-stack': 'Очередь и стек',
+	stack: 'Стек',
+	queue: 'Очередь',
+	// Графы
+	graphs: 'Графы',
+	bfs: 'Обход в ширину (BFS)',
+	dfs: 'Обход в глубину (DFS)',
+	// Hash-таблицы
+	'hash-tables': 'Хеш-таблицы',
+	collisions: 'Коллизии и методы решения'
+}
+
 export const Header = () => {
 	const pathname = usePathname()
 	const segments = pathname.split('/').filter(Boolean)
 
-	const labels: Record<string, string> = {
-		sections: 'Разделы',
-		general: 'Общая информация',
-		// Сортировки
-		sorting: 'Сортировки',
-		bubble: 'Пузырьковая сортировка',
-		selection: 'Сортировка выбором',
-		insertion: 'Сортировка вставками',
-		merge: 'Сортировка слиянием',
-		quick: 'Быстрая сортировка',
-		heap: 'Сортировка кучей',
-		// Поиск
-		search: 'Поиск',
-		linear: 'Линейный поиск',
-		binary: 'Бинарный поиск',
-		'bfs-dfs': 'BFS и DFS',
-		dijkstra: 'Алгоритм Дейкстры',
-		// Очередь и стек
-		'queue-stack': 'Очередь и стек',
-		stack: 'Стек',
-		queue: 'Очередь',
-		// Графы
-		graphs: 'Графы',
-		bfs: 'Обход в ширину (BFS)',
-		dfs: 'Обход в глубину (DFS)',
-		// Hash-таблицы
-		'hash-tables': 'Хеш-таблицы',
-		collisions: 'Коллизии и методы решения'
+	const getLabel = (segment: string): string => {
+		if (Object.prototype.hasOwnProperty.call(BREADCRUMB_LABELS, segment)) {
+			return BREADCRUMB_LABELS[segment]
+		}
+		return segment.charAt(0).toUpperCase() + segment.slice(1)
 	}
 
 	const crumbs = segments.map((segment, index) => {
 		const href = '/' + segments.slice(0, index + 1).join('/')
-		const label = labels[segment] ?? segment.charAt(0).toUpperCase() + segment.slice(1)
+		const label = getLabel(segment)
 
 		return { href, label }
 	})

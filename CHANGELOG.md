@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/Chswell/AlgoStudy/compare/v1.0.1...v1.0.2) (2026-02-14)
+
+
+### Bug Fixes
+
+* Добавлена отсутствующая библиотека ([93607c6](https://github.com/Chswell/AlgoStudy/commit/93607c6fc7709dd54cc1f9c7f16107f9c77b5d9e))
+
 ## [1.0.1](https://github.com/Chswell/AlgoStudy/compare/v1.0.0...v1.0.1) (2026-02-14)
 
 

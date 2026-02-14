@@ -1,6 +1,6 @@
 {
 	"name": "algostudy",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": "Nikita Streltsov<i@chswe11.ru>",
 	"scripts": {
 		"dev": "next dev",

@@ -94,7 +94,11 @@ export const Header = () => {
 			</div>
 			<div className={'flex items-center gap-2 sm:gap-5'}>
 				<div className={'bg-accent hover:bg-accent/80 cursor-pointer rounded-md p-2 sm:p-2.5'}>
-					<Link href={LINKS_SHARED.githubProject} className='flex w-full items-center justify-between'>
+					<Link
+						href={LINKS_SHARED.githubProject}
+						className='flex w-full items-center justify-between'
+						target={'_blank'}
+					>
 						<FaGithub className='h-4 w-4 sm:h-5 sm:w-5' />
 					</Link>
 				</div>

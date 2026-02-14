@@ -33,7 +33,7 @@ export function generateMetadata({
 		title: fullTitle,
 		description,
 		keywords: keywords.join(', '),
-		authors: [{ name: 'Nikita Streltsov', email: 'i@chswe11.ru' }],
+		authors: [{ name: 'Nikita Streltsov' }],
 		creator: 'Nikita Streltsov',
 		publisher: SITE_NAME,
 		robots: noIndex

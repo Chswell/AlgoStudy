@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Chswell/AlgoStudy/compare/v1.0.2...v1.1.0) (2026-02-14)
+
+
+### Features
+
+* добавлена кнопка поддержки ([898a7f6](https://github.com/Chswell/AlgoStudy/commit/898a7f60c0611b55f8cf511c12d5b05b9dfd0379))
+
 ## [1.0.2](https://github.com/Chswell/AlgoStudy/compare/v1.0.1...v1.0.2) (2026-02-14)
 
 

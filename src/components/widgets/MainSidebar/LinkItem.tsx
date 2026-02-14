@@ -3,9 +3,9 @@
 import { Check } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { SidebarMenuButton, SidebarMenuItem, useSidebar } from '@/components/ui/sidebar'
+import { SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar'
 import { useLearningProgressStore } from '@/store/learningProgressStore'
 
 interface ILinkItemProps {
@@ -18,7 +18,15 @@ interface ILinkItemProps {
 export const LinkItem: React.FC<ILinkItemProps> = ({ item }) => {
 	const path = usePathname()
 	const { isTopicCompleted } = useLearningProgressStore()
-	const isCompleted = isTopicCompleted(item.url)
+	const [mounted, setMounted] = useState(false)
+	
+	// Предотвращаем hydration mismatch
+	useEffect(() => {
+		setMounted(true)
+	}, [])
+	
+	// Используем значение только после монтирования
+	const isCompleted = mounted ? isTopicCompleted(item.url) : false
 	
 	return (
 		<SidebarMenuItem>

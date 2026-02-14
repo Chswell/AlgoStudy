@@ -1,6 +1,7 @@
 // @ts-nocheck
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 
 import RootProvider from '@/app/providers/RootProvider'
 import { WebsiteStructuredData } from '@/components/SEO/StructuredData'
@@ -61,6 +62,7 @@ export default function RootLayout({
 				/>
 				<Metrika />
 				<RootProvider>{children}</RootProvider>
+				<Analytics />
 			</body>
 		</html>
 	)

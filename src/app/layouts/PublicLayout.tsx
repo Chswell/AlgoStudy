@@ -23,14 +23,16 @@ const PublicLayout: React.FC<IPublicLayoutProps> = ({ children }) => {
 			<MainSidebar />
 			<SidebarInset className='flex h-screen flex-col overflow-hidden'>
 				<Header />
-				<div className='flex min-h-0 flex-1 flex-col gap-4 overflow-x-hidden overflow-y-auto p-2 sm:p-4 dark:bg-black'>
-					{children}
-					{showNavigation && (
-						<div className='mx-auto w-full max-w-4xl px-2 sm:px-0'>
-							<TopicNavigation />
-						</div>
-					)}
-					<Footer />
+				<div className='flex min-h-0 flex-1 flex-col overflow-x-hidden overflow-y-auto'>
+					<div className='flex flex-1 flex-col gap-4 p-2 sm:p-4 dark:bg-black'>
+						{children}
+						{showNavigation && (
+							<div className='mx-auto w-full max-w-4xl px-2 sm:px-0'>
+								<TopicNavigation />
+							</div>
+						)}
+						<Footer />
+					</div>
 				</div>
 			</SidebarInset>
 		</>

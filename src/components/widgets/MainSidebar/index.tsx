@@ -1,4 +1,4 @@
-import { ChevronRight } from 'lucide-react'
+import { AirplayIcon, ChevronRight } from 'lucide-react'
 import * as React from 'react'
 
 import { PUBLIC_ROUTES } from '@/app/configs/routes.config'
@@ -26,12 +26,19 @@ const data = {
 	navMain: [
 		{
 			title: 'Общая информация',
-			url: '#',
+			url: PUBLIC_ROUTES.sections('/general'),
 			items: [
 				{
-					title: '#',
-					url: '#',
-					isActive: true
+					title: 'Что такое алгоритм',
+					url: PUBLIC_ROUTES.sections('/general')
+				},
+				{
+					title: 'Классы сложности',
+					url: PUBLIC_ROUTES.sections('/general/complexity')
+				},
+				{
+					title: 'Оценка сложности',
+					url: PUBLIC_ROUTES.sections('/general/complexity-analysis')
 				}
 			]
 		},
@@ -71,53 +78,77 @@ const data = {
 		},
 		{
 			title: 'Поиск',
-			url: '#',
+			url: PUBLIC_ROUTES.sections('/search'),
 			items: [
 				{
+					title: 'Общая информация',
+					url: PUBLIC_ROUTES.sections('/search')
+				},
+				{
 					title: 'Линейный',
-					url: '#'
+					url: PUBLIC_ROUTES.sections('/search/linear')
 				},
 				{
 					title: 'Бинарный',
-					url: '#'
+					url: PUBLIC_ROUTES.sections('/search/binary')
 				},
 				{
 					title: 'BFS, DFS',
-					url: '#'
+					url: PUBLIC_ROUTES.sections('/search/bfs-dfs')
 				},
 				{
 					title: 'Алгоритм Дейкстры',
-					url: '#'
+					url: PUBLIC_ROUTES.sections('/search/dijkstra')
 				}
 			]
 		},
 		{
 			title: 'Очередь и стек',
-			url: '#',
+			url: PUBLIC_ROUTES.sections('/queue-stack'),
 			items: [
 				{
-					title: '#',
-					url: '#'
+					title: 'Общая информация',
+					url: PUBLIC_ROUTES.sections('/queue-stack')
+				},
+				{
+					title: 'Стек (Stack)',
+					url: PUBLIC_ROUTES.sections('/queue-stack/stack')
+				},
+				{
+					title: 'Очередь (Queue)',
+					url: PUBLIC_ROUTES.sections('/queue-stack/queue')
 				}
 			]
 		},
 		{
 			title: 'Графы BFS, DFS',
-			url: '#',
+			url: PUBLIC_ROUTES.sections('/graphs'),
 			items: [
 				{
-					title: '#',
-					url: '#'
+					title: 'Что такое граф',
+					url: PUBLIC_ROUTES.sections('/graphs')
+				},
+				{
+					title: 'Обход в ширину (BFS)',
+					url: PUBLIC_ROUTES.sections('/graphs/bfs')
+				},
+				{
+					title: 'Обход в глубину (DFS)',
+					url: PUBLIC_ROUTES.sections('/graphs/dfs')
 				}
 			]
 		},
 		{
 			title: 'Hash-таблицы',
-			url: '#',
+			url: PUBLIC_ROUTES.sections('/hash-tables'),
 			items: [
 				{
-					title: '#',
-					url: '#'
+					title: 'Идея хеш-таблицы',
+					url: PUBLIC_ROUTES.sections('/hash-tables')
+				},
+				{
+					title: 'Коллизии и методы решения',
+					url: PUBLIC_ROUTES.sections('/hash-tables/collisions')
 				}
 			]
 		}
@@ -129,9 +160,20 @@ export function MainSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) 
 		<Sidebar {...props}>
 			<SidebarHeader>
 				<SidebarLogo />
-				<SearchForm />
 			</SidebarHeader>
 			<SidebarContent className='gap-0'>
+				<SidebarGroup>
+					<SidebarGroupContent>
+						<SidebarMenu>
+							<LinkItem
+								item={{
+									title: 'Roadmap',
+									url: PUBLIC_ROUTES.roadmap()
+								}}
+							/>
+						</SidebarMenu>
+					</SidebarGroupContent>
+				</SidebarGroup>
 				{data.navMain.map(item => (
 					<Collapsible key={item.title} title={item.title} defaultOpen className='group/collapsible'>
 						<SidebarGroup>

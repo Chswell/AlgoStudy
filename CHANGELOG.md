@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Chswell/AlgoStudy/compare/v1.0.0...v1.0.1) (2026-02-14)
+
+
+### Bug Fixes
+
+* Исправлено отображение Breadcrumbs ([d1b843f](https://github.com/Chswell/AlgoStudy/commit/d1b843f10bced8e0aab8585ffed8061943e12085))
+
 # 1.0.0 (2026-02-14)
 
 

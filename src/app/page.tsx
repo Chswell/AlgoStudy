@@ -2,12 +2,38 @@
  * Originally authored by Nikita Streltsov (2026)
  * Licensed under Apache-2.0
  */
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import PublicLayout from '@/app/layouts/PublicLayout'
+import { generateMetadata } from '@/lib/metadata'
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+
+export const metadata: Metadata = generateMetadata({
+	title: 'Изучай алгоритмы и структуры данных',
+	description:
+		'Изучай алгоритмы и структуры данных простым языком. Примеры кода на JavaScript, Python и C++. Визуализации, асимптотика, плюсы и минусы каждого алгоритма.',
+	path: '/',
+	keywords: [
+		'алгоритмы',
+		'структуры данных',
+		'программирование',
+		'обучение',
+		'сортировка',
+		'поиск',
+		'графы',
+		'хеш-таблицы',
+		'JavaScript',
+		'Python',
+		'C++',
+		'асимптотика',
+		'Big O',
+		'обучение программированию',
+		'алгоритмы для начинающих'
+	]
+})
 
 export default function Page() {
 	return (

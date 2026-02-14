@@ -1,18 +1,48 @@
+import type { Metadata } from 'next'
 import React from 'react'
 
 import PublicLayout from '@/app/layouts/PublicLayout'
+import { generateMetadata } from '@/lib/metadata'
 
 import BlurredCodeExample from '@/components/BlurredCodeExample'
+import { ArticleStructuredData } from '@/components/SEO/StructuredData'
 import { CodeTabs, TabsContent, TabsList, TabsTrigger } from '@/components/CodeTabs'
 import { MarkAsLearnedButton } from '@/components/MarkAsLearnedButton'
 import { Badge } from '@/components/ui/badge'
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://algostudy.ru'
+
+export const metadata: Metadata = generateMetadata({
+	title: 'Пузырьковая сортировка - алгоритм, сложность, примеры кода',
+	description:
+		'Изучи пузырьковую сортировку: идея алгоритма, сложность O(n²), примеры реализации на JavaScript, Python, C++ и Java. Плюсы и минусы, когда использовать.',
+	path: '/sections/sorting/bubble',
+	keywords: [
+		'пузырьковая сортировка',
+		'bubble sort',
+		'алгоритм сортировки',
+		'O(n²)',
+		'сортировка массива',
+		'JavaScript',
+		'Python',
+		'C++',
+		'Java'
+	],
+	type: 'article'
+})
 
 interface IBubbleSortPageProps {}
 
 const BubbleSortPage: React.FC<IBubbleSortPageProps> = () => {
 	return (
-		<PublicLayout>
-			<div className='mx-auto flex max-w-4xl flex-col gap-4 px-2 py-4 sm:gap-8 sm:px-4 sm:py-8 overflow-x-hidden min-w-0 w-full'>
+		<>
+			<ArticleStructuredData
+				title='Пузырьковая сортировка'
+				description='Изучи пузырьковую сортировку: идея алгоритма, сложность O(n²), примеры реализации на JavaScript, Python, C++ и Java.'
+				url={`${SITE_URL}/sections/sorting/bubble}`}
+			/>
+			<PublicLayout>
+				<div className='mx-auto flex max-w-4xl flex-col gap-4 px-2 py-4 sm:gap-8 sm:px-4 sm:py-8 overflow-x-hidden min-w-0 w-full'>
 				<header className='space-y-2 text-center'>
 					<div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
 						<h1 className='scroll-m-20 text-3xl font-bold tracking-tight sm:text-4xl break-words'>
@@ -190,7 +220,8 @@ public static int[] bubbleSort(int[] arr) {
 					<MarkAsLearnedButton />
 				</div>
 			</div>
-		</PublicLayout>
+			</PublicLayout>
+		</>
 	)
 }
 

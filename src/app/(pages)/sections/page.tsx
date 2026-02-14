@@ -1,6 +1,26 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import PublicLayout from '@/app/layouts/PublicLayout'
+import { generateMetadata } from '@/lib/metadata'
+
+export const metadata: Metadata = generateMetadata({
+	title: 'Разделы по алгоритмам и структурам данных',
+	description:
+		'Выбери тему для изучения: сортировки, поиск, графы, хеш-таблицы и многое другое. Простые объяснения с примерами кода на JavaScript, Python и C++.',
+	path: '/sections',
+	keywords: [
+		'алгоритмы',
+		'структуры данных',
+		'сортировка',
+		'поиск',
+		'графы',
+		'хеш-таблицы',
+		'очередь',
+		'стек',
+		'обучение программированию'
+	]
+})
 
 const SectionsPage = () => {
 	return (

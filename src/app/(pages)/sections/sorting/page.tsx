@@ -1,6 +1,29 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import PublicLayout from '@/app/layouts/PublicLayout'
+import { generateMetadata } from '@/lib/metadata'
+
+export const metadata: Metadata = generateMetadata({
+	title: 'Алгоритмы сортировки - пузырьковая, быстрая, слиянием и другие',
+	description:
+		'Изучи все алгоритмы сортировки: пузырьковая, выбором, вставками, слиянием, быстрая и кучей. Сложность, примеры кода на JavaScript, Python, C++ и Java.',
+	path: '/sections/sorting',
+	keywords: [
+		'сортировка',
+		'алгоритмы сортировки',
+		'пузырьковая сортировка',
+		'быстрая сортировка',
+		'сортировка слиянием',
+		'heap sort',
+		'quick sort',
+		'bubble sort',
+		'merge sort',
+		'JavaScript',
+		'Python',
+		'C++'
+	]
+})
 
 const SortingPage = () => {
 	return (

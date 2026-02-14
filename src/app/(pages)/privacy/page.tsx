@@ -1,11 +1,21 @@
+import type { Metadata } from 'next'
 import React from 'react'
 
 import PublicLayout from '@/app/layouts/PublicLayout'
+import { generateMetadata } from '@/lib/metadata'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 // Статическая дата для избежания проблем с гидратацией
 const LAST_UPDATED = '1 января 2025'
+
+export const metadata: Metadata = generateMetadata({
+	title: 'Политика конфиденциальности',
+	description:
+		'Политика конфиденциальности AlgoStudy. Информация о сборе и использовании данных, файлах cookie и правах пользователей.',
+	path: '/privacy',
+	keywords: ['политика конфиденциальности', 'cookie', 'защита данных', 'GDPR']
+})
 
 const PrivacyPage: React.FC = () => {
 	return (

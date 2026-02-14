@@ -28,20 +28,20 @@ export function TopicNavigation() {
 	const isNextCompleted = next ? isTopicCompleted(next.url) : false
 
 	return (
-		<div className='space-y-6 border-t pt-8'>
+		<div className='space-y-4 border-t pt-4 sm:space-y-6 sm:pt-8'>
 			{/* Навигация Назад/Вперед */}
-			<div className='flex flex-col gap-4 sm:flex-row sm:justify-between'>
+			<div className='flex flex-col gap-3 sm:flex-row sm:justify-between sm:gap-4'>
 				{prev ? (
 					<Button
 						asChild
 						variant={'outline'}
-						className={`w-full px-5 py-7 sm:w-auto ${isPrevCompleted ? 'border-green-500 dark:border-green-500' : ''}`}
+						className={`w-full px-3 py-5 text-sm sm:w-auto sm:px-5 sm:py-7 sm:text-base ${isPrevCompleted ? 'border-green-500 dark:border-green-500' : ''}`}
 					>
-						<Link href={prev.url} className='flex items-center gap-5'>
+						<Link href={prev.url} className='flex items-center gap-2 sm:gap-5'>
 							<div className={`bg-accent rounded-full p-1`}>
 								<ChevronLeft className='h-4 w-4' />
 							</div>
-							<span className='flex flex-col items-start gap-1'>
+							<span className='flex flex-1 flex-col items-start gap-1'>
 								<span className='text-muted-foreground text-xs'>Назад</span>
 								<span className='flex items-center gap-2'>{prev.title}</span>
 							</span>
@@ -60,15 +60,15 @@ export function TopicNavigation() {
 					<Button
 						asChild
 						variant={'outline'}
-						className={`w-full px-5 py-7 sm:w-auto ${isNextCompleted ? 'border-green-500 dark:border-green-500' : ''}`}
+						className={`w-full px-3 py-5 text-sm sm:w-auto sm:px-5 sm:py-7 sm:text-base ${isNextCompleted ? 'border-green-500 dark:border-green-500' : ''}`}
 					>
-						<Link href={next.url} className='flex items-center gap-5'>
+						<Link href={next.url} className='flex items-center gap-2 sm:gap-5'>
 							{isNextCompleted && (
 								<div>
 									<CircleCheckBig className={'text-green-500'} />
 								</div>
 							)}
-							<span className='flex flex-col items-end gap-1'>
+							<span className='flex flex-1 flex-col items-end gap-1'>
 								<span className='text-muted-foreground text-xs'>Вперед</span>
 								<span className='flex items-center gap-2'>{next.title}</span>
 							</span>

@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card'
 const HashTablesPage = () => {
 	return (
 		<PublicLayout>
-			<div className='mx-auto flex max-w-3xl flex-col gap-8 py-8'>
+			<div className='mx-auto flex max-w-3xl flex-col gap-4 px-2 py-4 sm:gap-8 sm:px-4 sm:py-8'>
 				<header className='space-y-2 text-center'>
 					<div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
 						<h1 className='scroll-m-20 text-3xl font-bold tracking-tight sm:text-4xl'>

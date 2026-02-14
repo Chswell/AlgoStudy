@@ -11,8 +11,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 
 export const Footer = () => {
 	return (
-		<footer className='bg-background mt-auto border-t'>
-			<div className='mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row'>
+		<footer className='mt-auto border-t'>
+			<div className='mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-2 py-4 sm:flex-row sm:gap-4 sm:px-4 sm:py-6'>
 				<div className='flex flex-col items-center gap-2 sm:items-start'>
 					<p className='text-muted-foreground flex gap-2 text-sm'>
 						Разработано

@@ -21,17 +21,17 @@ const PublicLayout: React.FC<IPublicLayoutProps> = ({ children }) => {
 	return (
 		<>
 			<MainSidebar />
-			<SidebarInset>
+			<SidebarInset className='flex h-screen flex-col overflow-hidden'>
 				<Header />
-				<div className='flex flex-1 flex-col gap-4 p-4 dark:bg-black'>
+				<div className='flex min-h-0 flex-1 flex-col gap-4 overflow-x-hidden overflow-y-auto p-2 sm:p-4 dark:bg-black'>
 					{children}
 					{showNavigation && (
-						<div className='mx-auto w-full max-w-4xl'>
+						<div className='mx-auto w-full max-w-4xl px-2 sm:px-0'>
 							<TopicNavigation />
 						</div>
 					)}
+					<Footer />
 				</div>
-				<Footer />
 			</SidebarInset>
 		</>
 	)

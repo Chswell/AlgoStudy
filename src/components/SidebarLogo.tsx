@@ -1,9 +1,11 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import * as React from 'react'
+import { useEffect } from 'react'
 
-import { SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar'
+import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from '@/components/ui/sidebar'
 
 import pkg from '../../package.json'
 

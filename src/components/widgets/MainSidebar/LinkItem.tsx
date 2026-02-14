@@ -3,9 +3,9 @@
 import { Check } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React from 'react'
+import React, { useEffect } from 'react'
 
-import { SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar'
+import { SidebarMenuButton, SidebarMenuItem, useSidebar } from '@/components/ui/sidebar'
 import { useLearningProgressStore } from '@/store/learningProgressStore'
 
 interface ILinkItemProps {

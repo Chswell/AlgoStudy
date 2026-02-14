@@ -12,7 +12,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 export default function Page() {
 	return (
 		<PublicLayout>
-			<div className='mx-auto flex max-w-5xl flex-col gap-12 px-4 py-12 sm:py-16'>
+			<div className='mx-auto flex max-w-5xl flex-col gap-6 px-2 py-6 sm:gap-12 sm:px-4 sm:py-12 lg:py-16'>
 				{/* Hero Section */}
 				<header className='space-y-6 text-center'>
 					<h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl'>
@@ -35,7 +35,7 @@ export default function Page() {
 				{/* Quick Links */}
 				<section className='space-y-6'>
 					<h2 className='scroll-m-20 text-center text-2xl font-bold tracking-tight'>Основные разделы</h2>
-					<div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+					<div className='grid gap-3 grid-cols-1 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3'>
 						<Card className='transition hover:shadow-lg'>
 							<CardHeader>
 								<CardTitle>Сортировки</CardTitle>
@@ -115,7 +115,7 @@ export default function Page() {
 				{/* Features */}
 				<section className='space-y-6'>
 					<h2 className='scroll-m-20 text-center text-2xl font-bold tracking-tight'>Что ты найдёшь здесь</h2>
-					<div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+					<div className='grid gap-3 grid-cols-1 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3'>
 						<div className='bg-card space-y-2 rounded-lg border p-4'>
 							<h3 className='font-semibold'>Простое объяснение</h3>
 							<p className='text-muted-foreground text-sm'>

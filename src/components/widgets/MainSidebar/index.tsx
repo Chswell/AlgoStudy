@@ -1,5 +1,9 @@
+'use client'
+
 import { AirplayIcon, ChevronRight } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 import * as React from 'react'
+import { useEffect } from 'react'
 
 import { PUBLIC_ROUTES } from '@/app/configs/routes.config'
 
@@ -16,7 +20,8 @@ import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
-	SidebarRail
+	SidebarRail,
+	useSidebar
 } from '@/components/ui/sidebar'
 import { LinkItem } from '@/components/widgets/MainSidebar/LinkItem'
 
@@ -156,6 +161,16 @@ const data = {
 }
 
 export function MainSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+	const pathname = usePathname()
+	const { isMobile, setOpenMobile } = useSidebar()
+	
+	// Закрываем sidebar на мобильных устройствах при изменении пути
+	useEffect(() => {
+		if (isMobile) {
+			setOpenMobile(false)
+		}
+	}, [pathname, isMobile, setOpenMobile])
+	
 	return (
 		<Sidebar {...props}>
 			<SidebarHeader>

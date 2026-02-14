@@ -13,7 +13,7 @@ interface IHeapSortPageProps {}
 const HeapSortPage: React.FC<IHeapSortPageProps> = () => {
 	return (
 		<PublicLayout>
-			<div className='mx-auto flex max-w-4xl flex-col gap-8 py-8'>
+			<div className='mx-auto flex max-w-4xl flex-col gap-4 px-2 py-4 sm:gap-8 sm:px-4 sm:py-8 overflow-x-hidden'>
 				<header className='space-y-2 text-center'>
 					<div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
 						<h1 className='scroll-m-20 text-3xl font-bold tracking-tight sm:text-4xl'>
@@ -65,7 +65,7 @@ const HeapSortPage: React.FC<IHeapSortPageProps> = () => {
 							</ul>
 						</div>
 
-						<div className='grid gap-4 md:grid-cols-2'>
+						<div className='grid gap-3 grid-cols-1 sm:gap-4 md:grid-cols-2'>
 							<div className='space-y-2 rounded-lg border bg-card p-4 text-sm'>
 								<p className='font-medium text-emerald-600 dark:text-emerald-400'>
 									Плюсы
@@ -101,7 +101,7 @@ const HeapSortPage: React.FC<IHeapSortPageProps> = () => {
 								</TabsList>
 								<TabsContent value='js'>
 									<BlurredCodeExample>
-										<pre className='mt-2 p-3 text-xs sm:text-sm'>
+										<pre className='mt-2 p-3 text-xs sm:text-sm overflow-x-auto'>
 											<code>{`function heapify(a, n, i) {
   let largest = i;
   const left = 2 * i + 1;
@@ -138,7 +138,7 @@ export function heapSort(arr) {
 								</TabsContent>
 								<TabsContent value='py'>
 									<BlurredCodeExample>
-										<pre className='mt-2 p-3 text-xs sm:text-sm'>
+										<pre className='mt-2 p-3 text-xs sm:text-sm overflow-x-auto'>
 											<code>{`def heapify(a, n, i):
     largest = i
     left = 2 * i + 1
@@ -173,7 +173,7 @@ def heap_sort(arr):
 								</TabsContent>
 								<TabsContent value='cpp'>
 									<BlurredCodeExample>
-										<pre className='mt-2 p-3 text-xs sm:text-sm'>
+										<pre className='mt-2 p-3 text-xs sm:text-sm overflow-x-auto'>
 											<code>{`#include <vector>
 
 void heapify(std::vector<int>& arr, int n, int i) {
@@ -207,7 +207,7 @@ void heapSort(std::vector<int>& arr) {
 								</TabsContent>
 								<TabsContent value='java'>
 									<BlurredCodeExample>
-										<pre className='mt-2 p-3 text-xs sm:text-sm'>
+										<pre className='mt-2 p-3 text-xs sm:text-sm overflow-x-auto'>
 											<code>{`public static void heapify(int[] arr, int n, int i) {
     int largest = i;
     int left = 2 * i + 1;

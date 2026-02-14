@@ -12,7 +12,7 @@ interface IMergeSortPageProps {}
 const MergeSortPage: React.FC<IMergeSortPageProps> = () => {
 	return (
 		<PublicLayout>
-			<div className='mx-auto flex max-w-4xl flex-col gap-8 py-8'>
+			<div className='mx-auto flex max-w-4xl flex-col gap-4 px-2 py-4 sm:gap-8 sm:px-4 sm:py-8 overflow-x-hidden'>
 				<header className='space-y-2 text-center'>
 					<div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
 						<h1 className='scroll-m-20 text-3xl font-bold tracking-tight sm:text-4xl'>
@@ -61,7 +61,7 @@ const MergeSortPage: React.FC<IMergeSortPageProps> = () => {
 							</ul>
 						</div>
 
-						<div className='grid gap-4 md:grid-cols-2'>
+						<div className='grid gap-3 grid-cols-1 sm:gap-4 md:grid-cols-2'>
 							<div className='space-y-2 rounded-lg border bg-card p-4 text-sm'>
 								<p className='font-medium text-emerald-600 dark:text-emerald-400'>
 									Плюсы
@@ -97,7 +97,7 @@ const MergeSortPage: React.FC<IMergeSortPageProps> = () => {
 								</TabsList>
 								<TabsContent value='js'>
 									<BlurredCodeExample>
-										<pre className='mt-2 p-3 text-xs sm:text-sm'>
+										<pre className='mt-2 p-3 text-xs sm:text-sm overflow-x-auto'>
 											<code>{`function merge(left, right) {
   const result = [];
   let i = 0, j = 0;
@@ -129,7 +129,7 @@ export function mergeSort(arr) {
 								</TabsContent>
 								<TabsContent value='py'>
 									<BlurredCodeExample>
-										<pre className='mt-2 p-3 text-xs sm:text-sm'>
+										<pre className='mt-2 p-3 text-xs sm:text-sm overflow-x-auto'>
 											<code>{`def merge(left, right):
     result = []
     i = j = 0
@@ -161,7 +161,7 @@ def merge_sort(arr):
 								</TabsContent>
 								<TabsContent value='cpp'>
 									<BlurredCodeExample>
-										<pre className='mt-2 p-3 text-xs sm:text-sm'>
+										<pre className='mt-2 p-3 text-xs sm:text-sm overflow-x-auto'>
 											<code>{`#include <vector>
 
 void merge(std::vector<int>& arr, int l, int m, int r) {
@@ -198,7 +198,7 @@ void mergeSort(std::vector<int>& arr, int l, int r) {
 								</TabsContent>
 								<TabsContent value='java'>
 									<BlurredCodeExample>
-										<pre className='mt-2 p-3 text-xs sm:text-sm'>
+										<pre className='mt-2 p-3 text-xs sm:text-sm overflow-x-auto'>
 											<code>{`import java.util.Arrays;
 
 public static void merge(int[] arr, int l, int m, int r) {

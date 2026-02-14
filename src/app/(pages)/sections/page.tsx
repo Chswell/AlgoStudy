@@ -5,7 +5,7 @@ import PublicLayout from '@/app/layouts/PublicLayout'
 const SectionsPage = () => {
 	return (
 		<PublicLayout>
-			<div className='mx-auto flex max-w-3xl flex-col gap-8 py-8'>
+			<div className='mx-auto flex max-w-3xl flex-col gap-4 px-2 py-4 sm:gap-8 sm:px-4 sm:py-8'>
 				<header className='space-y-2 text-center'>
 					<h1 className='scroll-m-20 text-3xl font-bold tracking-tight sm:text-4xl'>
 						Разделы по алгоритмам и структурам данных

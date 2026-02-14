@@ -64,7 +64,7 @@ export const Header = () => {
 	})
 
 	return (
-		<header className='bg-background sticky top-0 z-50 flex h-16 shrink-0 items-center justify-between gap-2 border-b px-4'>
+		<header className='bg-background sticky top-0 z-50 flex h-14 shrink-0 items-center justify-between gap-2 border-b px-2 sm:h-16 sm:px-4'>
 			<div className={'flex items-center gap-2'}>
 				<SidebarTrigger className='-ml-1' />
 				<Breadcrumb>
@@ -92,10 +92,10 @@ export const Header = () => {
 					</BreadcrumbList>
 				</Breadcrumb>
 			</div>
-			<div className={'flex items-center gap-5'}>
-				<div className={'bg-accent hover:bg-accent/80 cursor-pointer rounded-md p-2.5'}>
+			<div className={'flex items-center gap-2 sm:gap-5'}>
+				<div className={'bg-accent hover:bg-accent/80 cursor-pointer rounded-md p-2 sm:p-2.5'}>
 					<Link href={LINKS_SHARED.githubProject} className='flex w-full items-center justify-between'>
-						<FaGithub />
+						<FaGithub className='h-4 w-4 sm:h-5 sm:w-5' />
 					</Link>
 				</div>
 				<DarkModeToggle />

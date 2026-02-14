@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import { FaGithub } from 'react-icons/fa6'
+import { FaHeart } from 'react-icons/fa6'
 
 import { LINKS_SHARED } from '@/app/configs/LINKS_SHARED'
 
@@ -108,8 +109,20 @@ export const Header = () => {
 						href={LINKS_SHARED.githubProject}
 						className='flex w-full items-center justify-between'
 						target={'_blank'}
+						rel='noopener noreferrer'
 					>
 						<FaGithub className='h-4 w-4 sm:h-5 sm:w-5' />
+					</Link>
+				</div>
+				<div className={'bg-accent hover:bg-accent/80 cursor-pointer rounded-md p-2 sm:p-2.5'}>
+					<Link
+						href='https://dalink.to/stre1tsoff'
+						className='flex w-full items-center justify-between'
+						target={'_blank'}
+						rel='noopener noreferrer'
+						aria-label='Поддержать проект'
+					>
+						<FaHeart className='h-4 w-4 sm:h-5 sm:w-5 text-red-500' />
 					</Link>
 				</div>
 				<DarkModeToggle />

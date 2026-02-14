@@ -47,6 +47,7 @@ jobs:
           fi
 
       - name: Send Telegram message
+        if: steps.check_release.outputs.release_created == 'true'
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

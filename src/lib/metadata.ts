@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://algostudy.ru'
-const SITE_NAME = 'AlgoStudy'
+const SITE_NAME = 'АлгоИзучение:)'
 const DEFAULT_DESCRIPTION =
 	'Изучай алгоритмы и структуры данных простым языком. Примеры кода на JavaScript, Python и C++. Визуализации, асимптотика, плюсы и минусы каждого алгоритма.'
 
@@ -73,4 +73,3 @@ export function generateMetadata({
 		metadataBase: new URL(SITE_URL)
 	}
 }
-

@@ -9,6 +9,8 @@ import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from '@/c
 
 import pkg from '../../package.json'
 
+import { SITE_NAME } from '@/lib/metadata'
+
 export const SidebarLogo = () => {
 	return (
 		<SidebarMenu>
@@ -23,7 +25,7 @@ export const SidebarLogo = () => {
 							<p className={'text-xl font-extrabold'}>AS</p>
 						</div>
 						<div className='flex flex-col gap-0.5 leading-none'>
-							<span className='font-medium'>AlgoStudy</span>
+							<span className='font-medium'>{SITE_NAME}</span>
 							<span className='text-muted-foreground text-xs'>v{pkg.version}</span>
 						</div>
 					</Link>
